@@ -1,5 +1,6 @@
 body {
   overflow-x: hidden;
+  background-color: #f5f6faa3;
 }
 
 ul {
@@ -23,6 +24,11 @@ a {
 ::-moz-selection {
   background: rgba(92, 198, 208, 1);
   color: #ffffff;
+}
+
+input, input:focus, textarea, select {
+  outline: none !important;
+  box-shadow: none!important;
 }
 
 .bg-firm_style {
@@ -212,6 +218,49 @@ header .overlay {
   z-index: 1;
 }
 
+header.programs {
+  height: inherit;
+  min-height: inherit;
+}
+
+header.programs>div {
+  background: #ffffff;
+}
+
+header.programs .nav-item a::after {
+  content: '';
+  display: block;
+  width: 100%;
+  background-color: #007bff;
+  height: 3px;
+  transform: scale(0);
+  transition: all .3s;
+  margin-top: 5px;
+}
+
+header.programs .nav-item a:hover::after {
+  transform: scale(1);
+  z-index: inherit;
+}
+
+header.programs .navbar-nav .nav-item a {
+  color: #007bff;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+header.programs .navbar-nav .active>.nav-link, header.programs .navbar-nav .nav-item a:hover {
+  color: #007bff;
+}
+
+header.programs .navbar-nav .active>.nav-link {
+  font-weight: 500;
+}
+
+header.programs .lang_drop a {
+  color: #007bff!important;
+}
+
 section.steps .steps__title {
   /* font-family: "Montserrat Bold"; */
 }
@@ -263,6 +312,72 @@ section.our_univers div.univer div.text {
   font-weight: 500;
   text-align: center;
   padding-top: 3%;
+}
+
+section.add_search .form-control {
+  height: calc(3rem + 2px);
+}
+
+section.add_search .result_card {
+  box-shadow: 0 0 15px #0000000d;
+}
+
+section.add_search .result_card:hover {
+  box-shadow: 0 0 15px #00000020;
+}
+
+section.add_search .result_card div.university_lang span.text-muted, section.add_search .result_card div.university_price span.text-muted {
+  font-size: 0.9rem;
+}
+
+section.add_search .result_card div.university_lang>ul, section.add_search .result_card div.university_price>div.price {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.select_btn {
+  background-color: #007bff;
+  color: #ffffff!important;
+  border-radius: 0;
+  padding: 0.5rem 1.4rem;
+}
+
+.select_btn:hover {
+  background-color: transparent;
+  color: #007bff!important;
+  border: 1px solid #007bff!important;
+}
+
+.page-link {
+  margin: 0 5px;
+  background-color: transparent;
+  border-color: #007bff!important;
+  color: #007bff;
+}
+
+.page-link:hover:hover {
+  background-color: #278affdd;
+  border-color: #278affdd;
+  color: #ffffff;
+}
+
+.page-item.active .page-link {
+  background-color: #278aff;
+}
+
+.result_qwnty {
+  font-size: 1.1rem;
+}
+.result_qwnty span {
+  margin-right: 1rem;
+}
+
+.result_qwnty li {
+  margin: 0 .75rem;
+}
+
+.result_qwnty li:last-child {
+  margin-right: 0;
 }
 
 /* OWL Items */
@@ -332,6 +447,6 @@ section.our_univers div.univer div.text {
     background-image: url(../images/svg/menu_firm.svg);
   }
   .main-header.menu-fixed {
-    width: 100s%;
+    width: 100%;
   }
 }
